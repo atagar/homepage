@@ -1,9 +1,100 @@
-body, h1,h2,h3,h4,h5,h6 {font-family: Georgia, sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+/*============================================================
+General Tag Attributes
+============================================================*/
+
+body {
+  background-color: black;
+  box-sizing: border-box;
+  color: white;
+  font-family: Georgia, sans-serif;
+  font-size: 15px;
+  margin: 0px;
+  line-height: 1.5;
+}
+
+a {
+  color: #DDDDDD;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+hr {
+  border: 0px;
+  border-top: 1px solid #eee;
+  opacity: 0.60;
+  margin: 20px 0;
+  width: 200px;
+}
+
+/*============================================================
+Navigational Bar
+============================================================*/
+
+.nav {
+  background: #222;
+  box-sizing: inherit;
+  font-size: 12px;
+  height: 100%;
+  position: fixed;
+  width: 120px;
+}
+
+.nav a {
+  box-sizing: inherit;
+  display: block;
+  padding: 12px 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.nav i {
+  font-size: 36px; /* icon size */
+}
+
+.nav-selected, .nav a:hover {
+  background-color: black! important;
+  color: white! important;
+}
+
+/*============================================================
+General Page Content
+============================================================*/
+
+#main {
+  padding: 12px 24px;
+  margin-left: 120px;
+}
+
+.title {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 64px;
+  font-weight:400;
+  margin:10px 0;
+}
+
+.section {
+  color: #757575;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: justify;
+}
+
+.section > .header {
+  color: #f1f1f1;
+  display: block;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 10px 0;
+}
 

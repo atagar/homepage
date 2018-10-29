@@ -4,60 +4,55 @@
 <html lang="en">
   <head>
     <title>Damian's Homepage</title>
-    <link rel="stylesheet" type="text/css" href="css/w3.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/solid.css">
   </head>
 
-  <body class="w3-black">
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-      <!-- Avatar image in top left corner -->
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-        <i class="fas fa-home w3-xxlarge"></i>
+  <body>
+    <div class="nav">
+      <a href="#" class="nav-selected">
+        <i class="fas fa-home"></i>
         <p>HOME</p>
       </a>
 
-      <a href="https://blog.atagar.com/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fas fa-book w3-xxlarge"></i>
+      <a href="https://blog.atagar.com/">
+        <i class="fas fa-book"></i>
         <p>BLOG</p>
       </a>
 
-      <a href="#resume" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fas fa-user w3-xxlarge"></i>
+      <a href="#resume">
+        <i class="fas fa-user"></i>
         <p>RESUME</p>
       </a>
 
-      <a href="https://nyx.torproject.org/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fas fa-chart-area w3-xxlarge"></i>
+      <a href="https://nyx.torproject.org/">
+        <i class="fas fa-chart-area"></i>
         <p>NYX</p>
       </a>
 
-      <a href="https://stem.torproject.org/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fas fa-leaf w3-xxlarge"></i>
+      <a href="https://stem.torproject.org/">
+        <i class="fas fa-leaf"></i>
         <p>STEM</p>
       </a>
 
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fas fa-envelope w3-xxlarge"></i>
+      <a href="#contact">
+        <i class="fas fa-envelope"></i>
         <p>CONTACT</p>
       </a>
-    </nav>
+    </div>
 
-    <div class="w3-padding-large" id="main">
-      <!-- Header/Home -->
-      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> John Doe.</h1>
+    <div id="main">
+      <div class="title">
+        <h1>I'm John Doe.</h1>
         <p>Photographer and Web Designer.</p>
-        <img src="/w3images/man_smoke.jpg" alt="boy" class="w3-image" width="992" height="1108">
-      </header>
+      </div>
 
-      <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-        <h2 class="w3-text-light-grey">My Name</h2>
-        <hr style="width:200px" class="w3-opacity">
+      <div id="home" class="section">
+        <span class="header">My Name</span>
+        <hr>
 
-        <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a href="">magna</a> aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
       adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
@@ -65,4 +60,3 @@
     </div>
   </body>
 </html>
-
