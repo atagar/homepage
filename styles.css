@@ -69,8 +69,9 @@ General Page Content
 }
 
 .title {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  color: white;
+  margin-top: -32px;
+  padding-bottom: 96px;
   text-align: center;
 }
 
