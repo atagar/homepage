@@ -1,0 +1,26 @@
+images/favicon.png
+  Author: Damian Johnson
+  License: GPLv3
+
+images/sections/blog.png
+  Author: Apache Software Foundation
+  Source: Apache Logo (https://www.apache.org/foundation/press/kit/)
+  License: Apache v2 (https://www.apache.org/licenses/LICENSE-2.0)
+
+images/sections/contact.png
+  Source: Crystal Clear
+  Author: Everaldo Coelho (https://everaldo.com)
+  File: 128x128/apps/email.png
+  License: LGPLv4
+
+images/sections/nyx.png
+  Source: Oxygen (http://www.oxygen-icons.org/)
+  License: CC v3 (A, SA)
+  File: apps/utilities-system-monitor.png
+
+images/sections/stem.png
+  Source: http://www.wpclipart.com/plants/assorted/P/plant_stem.png.html
+  Author: Jakub Jankiewicz
+  License: Public Domain (http://www.wpclipart.com/legal.html#terms)
+
+
