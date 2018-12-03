@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <title>Resume</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/solid.css">
+  </head>
+
+  <body>
+    <div class="nav">
+      <a href="index.html">
+        <i class="fas fa-home"></i>
+        <p>HOME</p>
+      </a>
+
+      <a href="https://blog.atagar.com/">
+        <i class="fas fa-book"></i>
+        <p>BLOG</p>
+      </a>
+
+      <a href="resume.html" class="nav-selected">
+        <i class="fas fa-user"></i>
+        <p>RESUME</p>
+      </a>
+
+      <a href="https://nyx.torproject.org/">
+        <i class="fas fa-chart-area"></i>
+        <p>NYX</p>
+      </a>
+
+      <a href="https://stem.torproject.org/">
+        <i class="fas fa-leaf"></i>
+        <p>STEM</p>
+      </a>
+
+      <a href="contact.html">
+        <i class="fas fa-envelope"></i>
+        <p>CONTACT</p>
+      </a>
+    </div>
+
+    <div id="main">
+      <div id="home" class="section">
+        <div class="title">
+          <h1>Resume</h1>
+          <hr>
+        </div>
+
+        <table align="right">
+          <tr>
+            <td><a href="resources/resume.html"><img src="images/resume/icon_html.png" alt="html" border="0" /></a></td>
+            <td><a href="resources/resume.pdf"><img src="images/resume/icon_pdf.png" alt="pdf" border="0" /></a></td>
+            <td><a href="https://www.openhub.net/accounts/atagar"><img src="images/resume/icon_openhub.png" alt="openhub" border="0" /></a></td>
+          </tr>
+
+          <tr>
+            <td colspan="3">
+              <a href="images/resume/berlin.jpg"><img src="images/resume/berlin_small.png" title="PETS Conference, Berlin (2010)" alt="Me" border="0" align="right" /></a>
+            </td>
+          </tr>
+        </table>
+
+        <div id="resume-contnet">
+          <h1>Damian Johnson</h1>
+          <img src="images/resume/email.png" alt="email" />
+
+          <p>
+            <b>Current Work - </b> <a href="http://www.amazon.com/">Amazon</a> (SDE) and <a href="http://torproject.org/">the Tor project</a> (volunteer)<br />
+            <b>Languages - </b> Python and Java<br />
+            <b>Interests - </b> Interface development, computer security, and online privacy<br />
+            <b>Specialized Tools &amp; Libraries - </b> Curses, Swing, and Blender
+            <!--<b>Affiliations - </b> Electronic Frontier Foundation and Free Software Foundation<br />-->
+            <!--<b>Unusual Interests - </b> Juggling, writing <a href="../riddles/">riddles</a>, and lock picking-->
+          </p>
+
+          <h2>Work Experience:</h2>
+
+          <!--<b>Samples of Web Development - </b> <a href="http://www.atagar.com">Personal Home Page</a> and <a href="http://www.eecs.wsu.edu/sgl">Simulation and Gaming Lab</a><br />-->
+
+          <p>
+<b>Amazon.com (Fall '09 - Present)</b><br />
+Software development for the checkout team of RCX (retail customer experience). We work on customer facing aspects of the Amazon shopping cart and checkout pipeline, maintaining services (C++) and the dynamic server side content (HTML, JavaScript, and Perl Mason).
+          </p>
+
+          <p>
+<b>Tor Project Volunteer (Spring '09 - Present)</b><br />
+Core developer with <a href="https://www.torproject.org/">Tor</a>, an open source online privacy and counter-censorship project. In particular, Tor is a low-latency mix network that uses layered encryption and multiple hops (onion routing) to anonymize proxied TCP traffic.
+<br /><br />
+My work with the project primarily concerns usability and relay operation. I am the author of <a href="../arm/">arm</a>, a terminal based status monitor for Tor relays. This functions much like top does for system resource usage, aggregating information from multiple data sources (the relay consensus, ps, netstat, etc) to give relaying statistics and notify the user when problems occur. This is written in Python using the Curses interface.
+          </p>
+
+          <p>
+<b>Port Simulation Research Project (Fall '07 - Spring '09)</b><br />
+State-sponsored research supervised by professor <a href="http://www.eecs.wsu.edu/~holder/">Larry Holder</a> concerning the simulation of a major seaport in the Torque game engine to analyze it for security concerns such as illicit cargo. Project details and Masters thesis is available <a href="../portSim">here</a>. This also included some time as a teaching assistant for a programming practicum for Python and C.
+          </p>
+
+          <p>
+<b>Kana Quizzer (Personal Project, Summer '08)</b><br />
+Wrote a Java flashcard style <a href="../kanaQuizzer/">quizzing application</a> for learning Japanese. The program tallies how well the user is doing and weights questions to favor those the user is having difficulty with.
+          </p>
+
+          <p>
+<b>Free Media Directory (Personal Project, Winter '07)</b><br />
+Developed a <a href="../freeMedia/">reference site</a> for web and UI developers with media resources (mostly icons) freely available in a libre sense (GPL, CC, etc). This has been featured at places like <a href="http://www.webmasterkit.info/2008/05/30/download-free-web-icons/">webmasterkit.info</a> and averaged over a hundred visitors a day.
+          </p>
+
+          <p>
+<b>Google Summer of Code '08 (Summer '08)</b><br />
+Developed for the <a href="http://sip-communicator.org/">SIP Communicator</a>, a Java open source VoIP and chat client, as a participant in <a href="http://code.google.com/soc/2008/">Google Summer of Code</a>. Contributions included keybinding customization and internationalized spell checking. Development log and source code can be found <a href="http://www.atagar.com/misc/gsocBlog/">here</a>.
+          </p>
+
+          <p>
+<b>Google Internship (Winter '07 - Fall '07)</b><br />
+Six month internship as a software engineer in test with <a href="http://pack.google.com">Google Pack</a>. Work included writing an applet front end for the test harness and expanding capabilities of Eggplant test scripts.
+          </p>
+
+          <!--
+          <p>
+<b>CSS Mentor (Fall '06 - Winter '07)</b><br />
+Lab mentor for undergraduate computing and software systems (CSS) courses at <a href="http://www.tacoma.washington.edu/tech/">UWT</a>. This chiefly involved troubleshooting code and providing clarification for difficult concepts.
+          </p>
+          -->
+
+          <!--
+          <p>
+<b>IT Lab Assistant (Summer '05)</b><br />
+Worked with <a href="http://www.tacoma.washington.edu/tech/">UWT</a> system administrators to prepare for the following school year. This included automating software installations via AutoIT scripts and using VMWare to test images for basic functionality.
+          </p>
+          -->
+
+          <h2>Education:</h2>
+
+          <br />
+          <table>
+            <tr>
+              <td width="300"><ul style="margin: 0px"><li>Washington State University</li></ul></td>
+              <td width="200">Fall '07 &mdash; Spring '09</td>
+              <td>GPA: 3.60</td>
+            </tr>
+
+            <tr>
+              <td colspan="3">
+                <p style="margin: 0px 0px 10px 50px">
+Graduated with a Masters of Science in Computer Science
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><ul style="margin: 0px"><li>University of Washington: Tacoma</li></ul></td>
+              <td>Fall '05 &mdash; Spring '07</td>
+              <td>GPA: 3.75</td>
+            </tr>
+
+            <tr>
+              <td colspan="3">
+                <p style="margin: 0px 0px 0px 50px">
+Graduated with a Bachelor of Science in Computing and Software Systems
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- TCC
+          Fall '04 &mdash; Spring '05
+          Tacoma Community College
+          GPA: 3.46
+          -->
+
+          <p>
+References available upon request.
+          </p>
+
+          <p>
+<b><i>Last Updated: 12/10/10</i></b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
