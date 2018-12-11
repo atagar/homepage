@@ -125,3 +125,13 @@ Resume Page Content
 #resume-contnet {
 }
 
+#resume-top-nav {
+  float: right;
+  margin-top: -150px;
+}
+
+#resume-photo {
+  float: right;
+  margin: 15px;
+}
+
