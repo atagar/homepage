@@ -23,10 +23,10 @@ images/sections/stem.png
   Author: Jakub Jankiewicz
   License: Public Domain (http://www.wpclipart.com/legal.html#terms)
 
-images/resume/icon_github.png
+images/resume/github.png
   Source: GitHub (https://github.com/logos)
 
-images/resume/icon_openhub.png
+images/resume/openhub.png
   Source: OpenHub (https://www.openhub.net/)
   License: CCv3 (Attribution, http://creativecommons.org/licenses/by/3.0/)
 
