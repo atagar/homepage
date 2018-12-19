@@ -23,17 +23,8 @@ images/sections/stem.png
   Author: Jakub Jankiewicz
   License: Public Domain (http://www.wpclipart.com/legal.html#terms)
 
-images/resume/icon_html.png
-  Source: NuoveXT
-  Author: Alexandre Moore (https://www.deviantart.com/sa-ki)
-  License: GPLv2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-  File: 128x128/mimetypes/gnome-mime-text-html.png
-
-images/resume/icon_pdf.png
-  Source: NuoveXT
-  Author: Alexandre Moore (https://www.deviantart.com/sa-ki)
-  License: GPLv2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-  File: 128x128/mimetypes/gnome-mime-application-pdf.png
+images/resume/icon_github.png
+  Source: GitHub (https://github.com/logos)
 
 images/resume/icon_openhub.png
   Source: OpenHub (https://www.openhub.net/)
