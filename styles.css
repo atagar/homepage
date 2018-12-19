@@ -88,7 +88,7 @@ Front Page Content
 
 .title h1 {
   font-size: 64px;
-  font-weight:400;
+  font-weight: 400;
   margin: 0px;
 }
 
@@ -122,9 +122,6 @@ Front Page Content
 Resume Page Content
 ============================================================*/
 
-#resume-contnet {
-}
-
 #resume-top-nav {
   float: right;
   margin-top: -150px;
@@ -133,5 +130,14 @@ Resume Page Content
 #resume-photo {
   float: right;
   margin: 15px;
+}
+
+#resume > #education p {
+  margin: 0px 0px 10px 50px;
+}
+
+#resume > #education .school {
+  font-weight: 700;
+  margin-left: 25px;
 }
 
