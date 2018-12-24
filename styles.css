@@ -21,6 +21,31 @@ a:hover {
   color: white;
 }
 
+.title {
+  color: #926832;
+  margin-top: -50px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 64px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.title hr {
+  opacity: 0.60;
+  margin-left: 12.5%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 75%;
+}
+
+.title-quote {
+  color: #888888;
+  font-style: italic;
+}
+
 /*============================================================
 Navigational Bar
 ============================================================*/
@@ -78,26 +103,6 @@ Front Page Content
   padding-left: 10px;
   padding-right: 10px;
   width: 300px;
-}
-
-.title {
-  color: #926832;
-  margin-top: -50px;
-  text-align: center;
-}
-
-.title h1 {
-  font-size: 64px;
-  font-weight: 400;
-  margin: 0px;
-}
-
-.title hr {
-  opacity: 0.60;
-  margin-left: 12.5%;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  width: 75%;
 }
 
 .section {
