@@ -62,13 +62,16 @@ Navigational Bar
 .nav a {
   box-sizing: inherit;
   display: block;
+  height: 103px;
   padding: 12px 24px;
   text-align: center;
   width: 100%;
 }
 
 .nav i {
+  display: block;
   font-size: 36px; /* icon size */
+  padding-bottom: 13px;
 }
 
 .nav-selected, .nav a:hover {
