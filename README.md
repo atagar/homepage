@@ -1,6 +1,6 @@
 # Nothing To See Here
 
-[![Naked Gun scene](https://img.youtube.com/vi/pdFl__NlOpA/0.jpg)](https://www.youtube.com/watch?v=pdFl__NlOpA)
+[![Naked Gun scene](https://raw.githubusercontent.com/atagar/homepage/master/images/naked_gun_scene.jpg)](https://www.youtube.com/watch?v=pdFl__NlOpA)
 
 This repository contains the code behind my small [personal website](https://www.atagar.com/).
 

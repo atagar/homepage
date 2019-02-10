@@ -30,3 +30,6 @@ images/resume/openhub.png
   Source: OpenHub (https://www.openhub.net/)
   License: CCv3 (Attribution, http://creativecommons.org/licenses/by/3.0/)
 
+images/naked_gun_scene.jpg
+  Source: YouTube (video preview thumbnail: https://img.youtube.com/vi/pdFl__NlOpA/0.jpg)
+
