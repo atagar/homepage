@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+Redirect /freeMedia https://archive.atagar.com/freeMedia
+Redirect /nexus https://archive.atagar.com/nexus
+Redirect /riddles https://archive.atagar.com/riddles
+RedirectMatch "^/contact[/]?$" /contact.html
+
