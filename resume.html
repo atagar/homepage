@@ -37,7 +37,7 @@
         STEM
       </a>
 
-      <a href="contact.html">
+      <a href="contact.php">
         <i class="fas fa-envelope"></i>
         CONTACT
       </a>
