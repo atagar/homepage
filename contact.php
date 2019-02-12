@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (empty($_SESSION['token'])) {
+  $_SESSION['token'] = bin2hex(random_bytes(32));
+}
+
+$token = $_SESSION['token'];
+?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
 
@@ -61,6 +71,7 @@
           <div>
             <p>Email (if you want a reply):</p>
 
+            <input type="hidden" name="token" value="<?php echo $token ?>">
             <input type="text" name="email" size="25">
 
             <p>Message:</p>

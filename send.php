@@ -1,3 +1,8 @@
+<?php
+session_start();
+$expected_token = $_SESSION['token'];
+?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
 
@@ -54,7 +59,11 @@
 <?php
 $sent = false;
 
-if (isset($_POST['submit'])) {
+if (empty($_POST['token'])) {
+  echo "<!-- Error: no XSRF token present -->";
+} else if (!hash_equals($expected_token, $_POST['token'])) {
+  echo "<!-- Error: XSRF token invalid -->";
+} else if (isset($_POST['submit'])) {
   $to = "atagar1@gmail.com";
   $subject = "Comment from www.atagar.com";
   $email_field = $_POST['email'];
