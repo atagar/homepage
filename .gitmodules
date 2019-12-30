@@ -1,3 +1,7 @@
 [submodule "fontawesome"]
 	path = fontawesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
+
+[submodule "captcha"]
+	path = securimage
+	url = https://github.com/dapphp/securimage.git
