@@ -57,18 +57,25 @@ $expected_token = $_SESSION['token'];
         </div>
 
 <?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+
 $sent = false;
+$error = "";
+
+$message = wordwrap($_POST['message'], 70);
+$image = new Securimage();
 
 if (empty($_POST['token'])) {
-  echo "<!-- Error: no XSRF token present -->";
+  $error = "no XSRF token";
 } else if (!hash_equals($expected_token, $_POST['token'])) {
-  echo "<!-- Error: XSRF token invalid -->";
+  $error = "XSRF token invalid";
+} else if ($image->check($_POST['captcha_code']) == false) {
+  $error = "captcha incorrect";
 } else if (isset($_POST['submit'])) {
   $to = "atagar1@gmail.com";
   $subject = "Comment from www.atagar.com";
   $email_field = $_POST['email'];
   if ($email_field == "") $email_field = "anonymous";
-  $message = wordwrap($_POST['message'], 70);
 
   $body = "E-Mail: $email_field\n Message:\n $message";
   $sent = mail($to, $subject, $body);
@@ -78,10 +85,10 @@ if ($sent) {
   echo "        <h2>Thanks! Message successfully sent.</h2>
 ";
 } else {
-  echo "        <h2>Message failed to be sent. Please contact me via email instead.</h2>
-        <img src='images/resume/email.png' alt='email' />
+  echo "        <h2>Message couldn't send ($error). Please reach me by email instead.</h2>
+        <img src='images/resume/email_large.png' alt='email' />
         <br><br>
-        <p>Your message was:</p>
+        <h2>Your message was:</h2>
         <pre>$message</pre>
 ";
 }
