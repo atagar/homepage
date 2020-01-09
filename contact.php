@@ -76,11 +76,11 @@ $token = $_SESSION['token'];
 
             <p>Please type the text below:</p>
 
-            <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA image" />
+            <img id="captcha" src="/captcha.php" alt="CAPTCHA image" />
 
             <br>
             <input type="text" name="captcha_code" size="10" maxlength="6" />
-            <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">&nbsp;<i class="fas fa-sync"></i>&nbsp;different image</a>
+            <a href="#" onclick="document.getElementById('captcha').src = '/captcha.php?' + Math.random(); return false">&nbsp;<i class="fas fa-sync"></i>&nbsp;different image</a>
 
             <p>Message:</p>
             <textarea class="contact-form" rows="11" name="message" cols="80"></textarea>
