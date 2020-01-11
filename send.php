@@ -77,7 +77,7 @@ if (empty($_POST['token'])) {
   $email_field = $_POST['email'];
   if ($email_field == "") $email_field = "anonymous";
 
-  $body = "E-Mail: $email_field\n Message:\n $message";
+  $body = "E-Mail: $email_field\nMessage:\n $message";
   $sent = mail($to, $subject, $body);
 }
 
