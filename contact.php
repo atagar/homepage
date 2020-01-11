@@ -74,7 +74,7 @@ $token = $_SESSION['token'];
             <input type="hidden" name="token" value="<?php echo $token ?>">
             <input type="text" name="email" size="25">
 
-            <p>Please type the text below:</p>
+            <p>Please solve the following:</p>
 
             <img id="captcha" src="/captcha.php" alt="CAPTCHA image" />
 
