@@ -68,23 +68,33 @@ $token = $_SESSION['token'];
         <p>or use the following form (it's all the same). PGP public key is available <a href="pgp.html">here</a>.</p>
 
         <form method="POST" action="send.php">
-          <div>
-            <p>Email (if you want a reply):</p>
+          <div style="width: 40em">
+            <hr>
 
-            <input type="hidden" name="token" value="<?php echo $token ?>">
-            <input type="text" name="email" size="25">
+            <p>Message:</p>
+            <textarea class="contact-form" name="message"></textarea>
+
+            <br>
+
+            <div>
+              <span>Email (if you want a reply):</span>
+              <input style="float: right" type="text" name="email" size="25">
+            </div>
+
+            <br>
+
+            <hr>
 
             <p>Please solve the following:</p>
 
             <img id="captcha" src="/captcha.php" alt="CAPTCHA image" />
+            <input type="hidden" name="token" value="<?php echo $token ?>">
 
             <br>
             <input type="text" name="captcha_code" size="10" maxlength="6" />
             <a href="#" onclick="document.getElementById('captcha').src = '/captcha.php?' + Math.random(); return false">&nbsp;<i class="fas fa-sync"></i>&nbsp;different image</a>
 
-            <p>Message:</p>
-            <textarea class="contact-form" rows="11" name="message" cols="80"></textarea>
-            <br>
+            <br><br>
             <input type="submit" value="Submit" name="submit">
           </div>
         </form>
