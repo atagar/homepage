@@ -5,3 +5,7 @@
 [submodule "captcha"]
 	path = securimage
 	url = https://github.com/dapphp/securimage.git
+
+[submodule "phpmailer"]
+	path = phpmailer
+	url = https://github.com/PHPMailer/PHPMailer.git
