@@ -59,6 +59,14 @@ $expected_token = $_SESSION['token'];
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require $_SERVER['DOCUMENT_ROOT'] . '/phpmailer/src/Exception.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/phpmailer/src/PHPMailer.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/phpmailer/src/SMTP.php';
+
 $sent = false;
 $error = "";
 
@@ -72,13 +80,19 @@ if (empty($_POST['token'])) {
 } else if ($image->check($_POST['captcha_code']) == false) {
   $error = "captcha incorrect";
 } else if (isset($_POST['submit'])) {
-  $to = "atagar1@gmail.com";
-  $subject = "Comment from www.atagar.com";
-  $email_field = $_POST['email'];
-  if ($email_field == "") $email_field = "anonymous";
+  $from = $_POST['email'];
+  if ($from == "") $from = "anonymous@nobody.com";
 
-  $body = "E-Mail: $email_field\nMessage:\n $message";
-  $sent = mail($to, $subject, $body);
+  $email = new PHPMailer();
+  $email->isSendmail();
+  $email->SetFrom($from);
+  $email->AddAddress("atagar1@gmail.com");
+  $email->Subject = 'Comment from www.atagar.com';
+  $email->Body = $message;
+
+  if (!$email->send()) {
+    $error = $email->ErrorInfo;
+  }
 }
 
 if ($sent) {
