@@ -81,14 +81,14 @@ if (empty($_POST['token'])) {
   $error = "captcha incorrect";
 } else if (isset($_POST['submit'])) {
   $from = $_POST['email'];
-  if ($from == "") $from = "anonymous@nobody.com";
+  if ($from == "") $from = "anonymous";
 
   $email = new PHPMailer();
   $email->isSendmail();
-  $email->SetFrom($from);
+  $email->SetFrom("webserver@atagar.com");
   $email->AddAddress("atagar1@gmail.com");
   $email->Subject = 'Comment from www.atagar.com';
-  $email->Body = $message;
+  $email->Body = "E-Mail: $from\nMessage:\n $message";
 
   $sent = $email->send();
 
