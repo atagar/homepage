@@ -88,7 +88,7 @@ if (empty($_POST['token'])) {
   $email->SetFrom("webserver@atagar.com");
   $email->AddAddress("atagar1@gmail.com");
   $email->Subject = 'Comment from www.atagar.com';
-  $email->Body = "E-Mail: $from\nMessage:\n $message";
+  $email->Body = "E-Mail: $from\n\nMessage:\n$message";
 
   $sent = $email->send();
 
