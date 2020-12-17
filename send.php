@@ -90,9 +90,9 @@ if (empty($_POST['token'])) {
   $email->Subject = 'Comment from www.atagar.com';
   $email->Body = $message;
 
-  if (!$email->send()) {
-    $error = $email->ErrorInfo;
-  }
+  $sent = $email->send();
+
+  if (!$sent) $error = $email->ErrorInfo;
 }
 
 if ($sent) {
