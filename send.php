@@ -67,6 +67,50 @@ require $_SERVER['DOCUMENT_ROOT'] . '/phpmailer/src/Exception.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/phpmailer/src/PHPMailer.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/phpmailer/src/SMTP.php';
 
+function validate_attachment($attachment, $max_size) {
+  # Performs validation checks, raising a RuntimeException if there's a
+  # problem. This is based upon...
+  #
+  #   https://www.php.net/manual/en/features.file-upload.php#114004
+  #   https://github.com/PHPMailer/PHPMailer/blob/master/examples/send_file_upload.phps
+  #
+  # Parameters:
+  #
+  #   $attachment     $_FILES entry for this attachment
+  #   $max_size       maximum attachment size in megabytes
+  #
+  # Returns: filesystem path to attachment
+
+  if (!isset($attachment['error']) || is_array($attachment['error'])) {
+    throw new RuntimeException('BUG: missing or invalid error attribute');
+  }
+
+  switch ($attachment['error']) {
+    case UPLOAD_ERR_OK:
+      break;
+    case UPLOAD_ERR_NO_FILE:
+      throw new RuntimeException('no file sent');
+    case UPLOAD_ERR_INI_SIZE:
+    case UPLOAD_ERR_FORM_SIZE:
+      throw new RuntimeException('exceeded file size limit');
+    default:
+      throw new RuntimeException('unrecognized error');
+  }
+
+  if ($attachment['size'] > $max_size * 1024 * 1024) {
+    throw new RuntimeException("attachment must be less than $max_size MB");
+  }
+
+  $ext = PHPMailer::mb_pathinfo($attachment['name'], PATHINFO_EXTENSION);
+  $upload_path = tempnam(sys_get_temp_dir(), hash('sha256', $attachment['name'])) . '.' . $ext;
+
+  if (!move_uploaded_file($attachment['tmp_name'], $upload_path)) {
+    throw new RuntimeException('BUG: failed to rename attachment');
+  }
+
+  return $upload_path;
+}
+
 $sent = false;
 $error = "";
 
@@ -83,16 +127,33 @@ if (empty($_POST['token'])) {
   $from = $_POST['email'];
   if ($from == "") $from = "anonymous";
 
+  $attachment_filename = "none";
+  if (array_key_exists('attachment', $_FILES)) $attachment_filename = $_FILES['attachment']['name'];
+
   $email = new PHPMailer();
   $email->isSendmail();
   $email->SetFrom("webserver@atagar.com");
   $email->AddAddress("atagar1@gmail.com");
   $email->Subject = 'Comment from www.atagar.com';
-  $email->Body = "E-Mail: $from\n\nMessage:\n$message";
+  $email->Body = "E-Mail: $from\nAttachment: $attachment_filename\n\nMessage:\n$message";
 
-  $sent = $email->send();
+  if (array_key_exists('attachment', $_FILES)) {
+    try {
+      $attachment_path = validate_attachment($_FILES['attachment'], 10);
 
-  if (!$sent) $error = $email->ErrorInfo;
+      if (!$email->addAttachment($attachment_path, 'attachment')) {
+        throw new RuntimeException('failed to attach file to email');
+      }
+    } catch (RuntimeException $exc) {
+      $error = $exc->getMessage();
+    }
+  }
+
+  if (!$error) {
+    $sent = $email->send();
+
+    if (!$sent) $error = $email->ErrorInfo;
+  }
 }
 
 if ($sent) {

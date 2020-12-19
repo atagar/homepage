@@ -83,6 +83,13 @@ $token = $_SESSION['token'];
 
             <br>
 
+            <div>
+              <span>Attachment:</span>
+              <input style="float: right" type="file" name="attachment" />
+            </div>
+
+            <br>
+
             <hr>
 
             <p>Please solve the following:</p>
