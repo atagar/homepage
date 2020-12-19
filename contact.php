@@ -67,7 +67,7 @@ $token = $_SESSION['token'];
 
         <p>or use the following form (it's all the same). PGP public key is available <a href="pgp.html">here</a>.</p>
 
-        <form method="POST" action="send.php">
+        <form method="POST" enctype="multipart/form-data" action="send.php">
           <div style="width: 40em">
             <hr>
 
